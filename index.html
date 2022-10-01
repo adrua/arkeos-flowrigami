@@ -1,0 +1,29 @@
+<div id="libary-test"></div>
+<br />
+<div>
+    <arkeos-flowrigami artifacto="" view-mode=""></arkeos-flowrigami>
+</div>
+
+<script src="./src/assets/x-tag-raw.min.js" ></script>
+<script src="./dist/arkeos-flowrigami.js" ></script>
+
+<script>
+    let library = "arkeos-flowrigami"
+    var div = document.querySelector('#libary-test');
+    var myLib = window[library];
+    var exports = Object.keys(myLib).reduce((acum, element) => `
+${acum}<tr><th/><th>${element}</th></tr>
+`, '');
+    div.innerHTML += `<table>
+<tr>
+    <th>Library</th><th>Loaded</th>        
+</tr>
+<tr>
+    <th>${library}</th><th>${!!myLib}</th>        
+</tr>
+<tbody>
+${exports}
+</tbody>
+</table>
+`
+</script>
