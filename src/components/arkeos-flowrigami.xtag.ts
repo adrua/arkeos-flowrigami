@@ -1,4 +1,4 @@
-import Flowrigami = require('../assets/Flowrigami.umd');
+import Flowrigami = require("../../../dist/flowrigami/index");
 
 declare var XTagElement: any;
 
@@ -27,7 +27,7 @@ export class ArkeosFlowrigami extends XTagElement  {
                 this.flowrigami.unmount();
             }
     
-            this.flowrigami = new Flowrigami.default(this.host.firstElementChild, { viewMode: this._view_mode });
+            this.flowrigami = new Flowrigami.Flowrigami(this.host.firstElementChild, { viewMode: this._view_mode });
         });
     }
 
@@ -78,22 +78,21 @@ export class ArkeosFlowrigami extends XTagElement  {
 
     constructor() {
         super();
-    }
 
-    '::template(ready)'() {
-        
-        return `<div>i'm here</div><a id="arkeos-flowrigami-export" style="width: 0px; height: 0px;"></a>`;
-    }
-
-    connectedCallback() {
         this.host = this as unknown as HTMLElement;
-        this.anchor = this.host.querySelector("#arkeos-flowrigami-export");
-
         this.host.setAttribute("style", "width: 100%; height:100%; overflow: none;");
 
-        if(this._view_mode === null) {
-            this["view-mode"] = true; 
-        }
+        this.render().then(() => {
+            this.anchor = this.host.querySelector("#arkeos-flowrigami-export");    
+    
+            if(this._view_mode === null) {
+                this["view-mode"] = true; 
+            }    
+        });
+    }
+
+    '::template'() {        
+        return `<div style="width: 100%; height:100%; overflow: none;">i'm here</div><a id="arkeos-flowrigami-export" style="width: 0px; height: 0px;"></a>`;
     }
 }
 

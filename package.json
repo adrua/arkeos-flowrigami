@@ -1,9 +1,9 @@
 {
   "name": "arkeos-flowrigami",
   "version": "2022.928.956",
-  "description": "",
+  "description": "Arkeos workflow based in flowrigami",
   "main": "index.ts",
-  "module": "dist/main.js",
+  "module": "../dist/arkeos-flowrigami/index.js",
   "scripts": {
     "build": "yarn webpack --mode development",
     "build-prod": "yarn webpack --mode production",

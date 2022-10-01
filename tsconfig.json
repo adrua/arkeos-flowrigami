@@ -1,12 +1,14 @@
 {
     "compilerOptions": {
-      "outDir": "./dist/",
+      "outDir": "../dist/arkeos-flowrigami/",
       "sourceMap": true,
       "noImplicitAny": true,
       "module": "None",
       "target": "ES2022",
       "jsx": "react",
       "allowJs": true,
+      "declaration": true,
+      "declarationDir": "../dist/arkeos-flowrigami/",
       "moduleResolution": "node"
     }
   }
