@@ -1,11 +1,66 @@
 <div id="libary-test"></div>
 <br />
 <div>
-    <arkeos-flowrigami artifacto="" view-mode=""></arkeos-flowrigami>
+    <arkeos-split-panel id="mySplit" orientation="horizontal">
+        <arkeos-panel ratio="70">
+            <arkeos-split-panel id="mySplitEditors" orientation="vertical">
+                <arkeos-panel ratio="60" class="arkeos-flowrigami-panel">
+                    <arkeos-flowrigami source="" view-mode=""></arkeos-flowrigami>
+                </arkeos-panel>
+                <arkeos-panel ratio="40" id="arkeos-flowrigami-auxiliar-tool">
+                    <arkeos-mdc-tabs>
+                        <arkeos-mdc-tab-head caption="Input form"></arkeos-mdc-tab-head>
+                        <arkeos-mdc-tab-panel>
+                            <arkeos-factory>... Under construction!<arkeos-factory>
+                        </arkeos-mdc-tab-panel>
+                        <arkeos-mdc-tab-head caption="External process"></arkeos-mdc-tab-head>
+                        <arkeos-mdc-tab-panel>
+                            <arkeos-webservice>... Under construction!<arkeos-webservice>
+                        </arkeos-mdc-tab-panel>
+                        <arkeos-mdc-tab-head caption="Notifications"></arkeos-mdc-tab-head>
+                        <arkeos-mdc-tab-panel>
+                            <arkeos-factory>... Under construction!<arkeos-factory>
+                        </arkeos-mdc-tab-panel>
+                    </arkeos-mdc-tabs>
+                </arkeos-panel>
+            </arkeos-split-panel>
+        </arkeos-panel>
+        <arkeos-panel ratio="30">
+            <arkeos-split-panel orientation="vertical" id="mySplitBotton">
+                <arkeos-panel ratio="60">
+                    <arkeos-mdc-tabs>
+                        <arkeos-mdc-tab-head caption="Console"></arkeos-mdc-tab-head>
+                        <arkeos-mdc-tab-panel>
+                            <arkeos-monaco-editor language="text" id="consoleEditor" >
+                            <pre>...loading</pre>
+                            </arkeos-monaco-editor>
+                        </arkeos-mdc-tab-panel>
+                        <arkeos-mdc-tab-head caption="AST"></arkeos-mdc-tab-head>
+                        <arkeos-mdc-tab-panel>
+                            <arkeos-monaco-editor language="xml" id="astEditor" >
+                            <pre>...loading</pre>
+                            </arkeos-monaco-editor>
+                        </arkeos-mdc-tab-panel>
+                    </arkeos-mdc-tabs>
+                </arkeos-panel>
+                <arkeos-panel ratio="40">
+                    <arkeos-mdc-tabs>
+                        <arkeos-mdc-tab-head caption="XTag"></arkeos-mdc-tab-head>
+                        <arkeos-mdc-tab-panel>
+                            <arkeos-monaco-editor language="typescript" id="sourceEditor">
+                            <pre>...loading</pre>
+                            </arkeos-monaco-editor>
+                        </arkeos-mdc-tab-panel>
+                    </arkeos-mdc-tabs>
+                </arkeos-panel>
+            </arkeos-split-panel>
+        </arkeos-panel>
+    </arkeos-split-panel>
 </div>
 
 <script src="../dist/x-tag-raw.min.js" ></script>
 <script src="../dist/arkeos-flowrigami/index.js" ></script>
+<script src="../dist/arkeos-split-panel/index.js" ></script>
 
 <script>
     let library = "arkeos-flowrigami"
